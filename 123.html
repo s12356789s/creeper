@@ -1,27 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>期末報告</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
-		<meta name="author" content="ADD AUTHOR INFORMATION">
-		<meta name="robots" content="index, follow">
-
-		<!-- icons -->
 		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-
-		<!-- Bootstrap Core CSS file -->
 		<link rel="stylesheet" href="bootstrap.min.css">
-
-		<!-- Override CSS file - add your own CSS rules -->
 		<link rel="stylesheet" href="styles.css">
-
-		<!-- Conditional comment containing JS files for IE6 - 8 -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
 	<style>
 		a:link {background-color: #B2FF99;}
 		a:visited {background-color: #FFFF85;}
@@ -39,8 +23,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.row -->
-
 			<div class="row margin-b-2">
 				<div class="col-sm-6">
 					<img class="img-responsive thumbnail" src="https://tos157310821.files.wordpress.com/2020/01/02.jpg" alt="">
@@ -57,8 +39,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.row -->
-
 			<div class="row margin-b-2">
 				<div class="col-sm-6">
 					<img class="img-responsive thumbnail" src="https://tos157310821.files.wordpress.com/2020/04/18.4_w5_0409_g02.jpg" alt="">
@@ -75,8 +55,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.row -->
-
 			<div class="row margin-b-2">
 				<div class="col-sm-6">
 					<img class="img-responsive thumbnail" src="https://tos157310821.files.wordpress.com/2020/07/02.jpg" alt="">
@@ -93,8 +71,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.row -->
-
 			<div class="row margin-b-2">
 				<div class="col-sm-6">
 					<img class="img-responsive thumbnail" src="https://tos157310821.files.wordpress.com/2020/09/1-2.jpg" alt="">
@@ -111,15 +87,27 @@
 					</div>
 				</div>
 			</div>
-			<!-- /.row -->
 			</footer>
 		</div>
-		<!-- /.container-fluid -->
-
-		<!-- JQuery scripts -->
 	    <script src="assets/js/jquery-1.11.2.min.js"></script>
-
-		<!-- Bootstrap Core scripts -->
 		<script src="assets/js/bootstrap.min.js"></script>
+		<form>
+		請輸入目前體力: <input type="text" id="power1">
+		</form>
+		<form>
+		請輸入目標體力: <input type="text" id="power2">
+		</form>
+		<p id="minute"></p>
+		<button type="button" onclick="cal()">minute</button>
+		<script>
+		function cal(){
+		var power1 = document.getElementById("power1").value;
+		var power2 = document.getElementById("power2").value;
+		var time1 = 8*(power2-power1);document.getElementById("minute").innerHTML= time1;}
+		</script>
+		<p id='time'></p>
+		<script>
+		setInterval(function(){document.getElementById('time').innerHTML=Date();}, 1000);
+		</script>
   </body>
 </html>
